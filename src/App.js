@@ -42,7 +42,8 @@ import Example2 from './component/Member/Composition/Example2';
 import SignUpDiaLog from './component/Member/Composition/SignUpDialog';
 import PersonList from './component/Member/Axios/PersonList';
 import Rate from './component/Rate';
-
+import PopUpBox from './component/PopUp/PopUpBox';
+import AppPopUp from './component/PopUp/AppPopUp';
 const user = {
   firstName : 'Loc',
   lastName : 'Nguyen'
@@ -151,6 +152,7 @@ class App extends Comment{
           <p> TrafficLight </p>
           <TrafficLight />
         </div>
+        <p>------------------------------------</p>
         <div className="div-login">
           <div className="login">
             <h3>Login </h3>
@@ -191,6 +193,7 @@ class App extends Comment{
             <h3>Submit nhiều value</h3>
             <Reservation />
         </div>
+        <p>------------------------------------</p>
         <div className="containment">
             <h3>Ví Dụ 1 của Composition</h3>
             <Containment />
@@ -203,11 +206,13 @@ class App extends Comment{
             <h3>Ví Dụ 3 của Composition</h3>
             <SignUpDiaLog />
         </div>
+        <p>------------------------------------</p>
         <div className="Axios">
             <h3>Ví Dụ of Axios</h3>
             <PersonList />
         </div>
         <div>
+          <p>------------------------------------</p>
           <h2>Rate Start</h2>
           {/* <Rate /> */}
               {/* <StarRatings
@@ -227,9 +232,19 @@ class App extends Comment{
               /> */}
               <Rate />
         </div>
+        <p>------------------------------------</p>
+        <h3>npm install popup</h3>
+        <p>npm install reactjs-popup --save</p>
+        <p style={{color:"red"}}>PopUp in react là gì</p>
+        <p></p>
+        <PopUpBox />
+        <p>------------------------------------</p>
         <div>
-          <PopUpBox />
+            <AppPopUp>
+                <h3>My Popup Test</h3>
+            </AppPopUp>
         </div>
+        <p>------------------------------------</p>
       </div>
     )
   }
