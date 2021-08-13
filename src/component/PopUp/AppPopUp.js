@@ -7,7 +7,27 @@ import {
 import './Popup.css'
 import Popup from './Popup';
 
+function Example() {
+    // Declare a new state variable, which we'll call "count"
+    const [count, setCount] = useState(0);
+  
+    return (
+      <div>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
+          Click me
+        </button>
+      </div>
+    );
+  }
+
 function AppPopUp(){
+    // this.state = {
+    //     count: 0
+    // }
+    // thay vì this.state giống bên class thì đối với function sẽ this.state như sau
+    const [count, setCount] = useState(0);
+    //
     const [buttonPopup,setButtonPopup] = useState(false);
     const [timePopup, setTimePopup] = useState(false);
 
@@ -19,6 +39,15 @@ function AppPopUp(){
 
     return(
         <div>
+            <div>
+                <p></p>
+                <p style={{color:"red"}}>Test useState</p>
+                    {/* <p>You clicked {this.state.count} times</p> */}
+                    <p>You clicked {count} times</p>
+                <h3>
+                    <button onClick={() => setCount(count + 1)} >Zoom</button>
+                </h3>
+            </div>
             <h2>Test App for React-PopUp</h2>
             <button onClick={() => setButtonPopup(true)}>Open PopUp</button>
 
