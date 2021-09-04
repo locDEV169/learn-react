@@ -44,6 +44,9 @@ import PersonList from './component/Member/Axios/PersonList';
 import Rate from './component/Rate';
 import PopUpBox from './component/PopUp/PopUpBox';
 import AppPopUp from './component/PopUp/AppPopUp';
+import { Component } from 'react';
+import Text from './component/CoderX/contextApi/text';
+
 const user = {
   firstName : 'Loc',
   lastName : 'Nguyen'
@@ -70,34 +73,8 @@ const element = (
     hello, {formatName(user)}
   </h1>
 );
-// function App() {
-//   return (
 
-//     // // ben trong nay chi la html
-//     // <div className="App">
-//     //   Trang App chu
-//     //   <Header />
-//     //   Footer
-//     //   <Footer />
-//     // </div>
-//     <div>
-//       <Welcome name = "Loc" />
-//       <Welcome name = "Alo" />
-//       <section>
-//         <div className = "container">
-//           <div className = "row">
-//             <Demo />
-            
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   ); 
-// }
-
-// export default App;
-
-class App extends Comment{
+class App extends Component{
   constructor(props){
     super(props)
     this.todoItems = [
@@ -243,6 +220,11 @@ class App extends Comment{
             <AppPopUp>
                 <h3>My Popup Test</h3>
             </AppPopUp>
+        </div>
+        <p>------------------------------------</p>
+        <div>
+            <h2 style={{color:"red"}}>Context API</h2>
+            <Text />
         </div>
         <p>------------------------------------</p>
       </div>

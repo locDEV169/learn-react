@@ -1,0 +1,18 @@
+context: dung de quan state
+chi can dua state vao context thi di bat component nao e cung vao context lai dc state
+ra de su dung 
+luu tru 1 lan, reload mat
+
+dung context boc all component lai: 
+
+
+hien thi login va logout
+
+header doi sang lgout 
+mua hang: click mua thi hien qty len gio hang
+
+
+redux = context
+cach su dung redux rat phuc tap
+
+localstorage:
