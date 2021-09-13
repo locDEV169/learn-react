@@ -25,7 +25,7 @@ import notFound from './component/notFound';
 import Login from './component/Member/Login';
 import Clock from './component/clock';
 import Counter from './component/counter'
-
+import ReactHook  from './component/ReactHook/index';
 function formatName (user){
   return user.firstName + ' ' + user.lastName;
 }
@@ -58,6 +58,7 @@ ReactDOM.render(
           <Route path='/account' component={Account} />
           <Route path='/login' component={Login} />
           <Route path='/counter' component={Counter}/>
+          <Route component={ReactHook}/>
           <Route component={notFound}/>
           
         </Switch>

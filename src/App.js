@@ -15,11 +15,7 @@ import Clock from './component/clock'
 //import router-dom
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
   Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 // import react start
 import StarRatings from 'react-star-ratings';
@@ -48,23 +44,23 @@ import { Component } from 'react';
 import Text from './component/CoderX/contextApi/text';
 
 const user = {
-  firstName : 'Loc',
-  lastName : 'Nguyen'
-  
+  firstName: 'Loc',
+  lastName: 'Nguyen'
+
 }
-function Welcome(prop){
+function Welcome(prop) {
   // return <h1>Hello, {prop.name}</h1>
   return (
-<div>
-  {prop.name}
-  <br></br>
-  firstName: {user.firstName}
-  <br></br>
-  LastName: {user.lastName}
-</div>
+    <div>
+      {prop.name}
+      <br></br>
+      firstName: {user.firstName}
+      <br></br>
+      LastName: {user.lastName}
+    </div>
   );
 }
-function formatName (user){
+function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 };
 
@@ -74,13 +70,13 @@ const element = (
   </h1>
 );
 
-class App extends Component{
-  constructor(props){
+class App extends Component {
+  constructor(props) {
     super(props)
     this.todoItems = [
-      {title: 'abc',isComplete: true},
-      {title: 'xyz',isComplete: false},
-      {title: 'what ... '}  
+      { title: 'abc', isComplete: true },
+      { title: 'xyz', isComplete: false },
+      { title: 'what ... ' }
     ];
     // this.setState({
     //   rating: 0
@@ -93,8 +89,8 @@ class App extends Component{
   //   });
   // }
 
-  render(){
-    
+  render() {
+
     return (
       <div>
         <div>
@@ -102,13 +98,13 @@ class App extends Component{
         </div>
         <Header />
         <div className='component_Children'>
-          {this.props.children} 
+          {this.props.children}
           {/* gọi tới các prop con từ component con */}
-        </div> 
+        </div>
         {/* gọi tới các prop con từ component con  */}
-        <Welcome name = "hello "/>
+        <Welcome name="hello " />
         <p>From App:</p>
-        
+
         <Clock />
         <Toggle />
         <div className="TodoItem">
@@ -117,9 +113,9 @@ class App extends Component{
           <TodoItem title="xyz"/> */}
           {/* // xét trường hợp độ dài của array todoItems > 0 thì duyệt map ko thì hiện thị Nothing */}
           {
-            this.todoItems.length > 0 && this.todoItems.map((item,index) => (
+            this.todoItems.length > 0 && this.todoItems.map((item, index) => (
               <TodoItem key={index} item={item} />
-            ) )
+            ))
           }
           {
             this.todoItems.length === 0 && 'Nothing here'
@@ -139,60 +135,60 @@ class App extends Component{
             <h3>Login Control</h3>
             <LoginControl />
           </div>
-          
+
         </div>
         <div className="page">
-            <h3>Page hide/ show</h3>
-            <Page />
+          <h3>Page hide/ show</h3>
+          <Page />
         </div>
         <div className="numberlist">
-            <h3>Number List</h3>
-            <Numberlist />
+          <h3>Number List</h3>
+          <Numberlist />
         </div>
         <div className="form">
-            <h3>Test Form Name</h3>
-            <NameForm />
-            
+          <h3>Test Form Name</h3>
+          <NameForm />
+
         </div>
         <div className="form">
-            <h3>Test Form TestArea</h3>
-            <EssayForm />
+          <h3>Test Form TestArea</h3>
+          <EssayForm />
         </div>
         <div className="form">
-            <h3>Test Form select</h3>
-            <FlavorForm />
+          <h3>Test Form select</h3>
+          <FlavorForm />
         </div>
         <div className="form">
-            <h3>File Input upload</h3>
-            <FileInput />
+          <h3>File Input upload</h3>
+          <FileInput />
         </div>
         <div className="form">
-            <h3>Submit nhiều value</h3>
-            <Reservation />
+          <h3>Submit nhiều value</h3>
+          <Reservation />
         </div>
         <p>------------------------------------</p>
         <div className="containment">
-            <h3>Ví Dụ 1 của Composition</h3>
-            <Containment />
+          <h3>Ví Dụ 1 của Composition</h3>
+          <Containment />
         </div>
         <div className="containment">
-            <h3>Ví Dụ 2 của Composition</h3>
-            <Example2 />
+          <h3>Ví Dụ 2 của Composition</h3>
+          <Example2 />
         </div>
         <div className="containment">
-            <h3>Ví Dụ 3 của Composition</h3>
-            <SignUpDiaLog />
+          <h3>Ví Dụ 3 của Composition</h3>
+          <SignUpDiaLog />
         </div>
         <p>------------------------------------</p>
         <div className="Axios">
-            <h3>Ví Dụ of Axios</h3>
-            <PersonList />
+          <h3>Ví Dụ of Axios</h3>
+          <PersonList />
         </div>
         <div>
           <p>------------------------------------</p>
           <h2>Rate Start</h2>
           {/* <Rate /> */}
-              {/* <StarRatings
+          {/* <StarRatings
               rating={2.403}
               starRatedColor="yellow"
               starHoverColor="red"
@@ -200,32 +196,44 @@ class App extends Component{
               starDimension="40px"
               starSpacing="15px"
               /> */}
-              {/* <StarRatings
+          {/* <StarRatings
               rating={this.state.rating}
               starRatedColor="blue"
               changeRating={this.changeRating}
               numberOfStars={6}
               name='rating'
               /> */}
-              <Rate />
+          <Rate />
         </div>
         <p>------------------------------------</p>
         <h3>npm install popup</h3>
         <p>npm install reactjs-popup --save</p>
-        <p style={{color:"red"}}>PopUp in react là gì</p>
+        <p style={{ color: "red" }}>PopUp in react là gì</p>
         <p></p>
         <PopUpBox />
         <p>------------------------------------</p>
         <div>
-            <AppPopUp>
-                <h3>My Popup Test</h3>
-            </AppPopUp>
+          <AppPopUp>
+            <h3>My Popup Test</h3>
+          </AppPopUp>
         </div>
         <p>------------------------------------</p>
         <div>
-            <h2 style={{color:"red"}}>Context API</h2>
-            <Text />
+          <h2 style={{ color: "red" }}>Context API</h2>
+          <Text />
         </div>
+        <p>------------------------------------</p>
+        
+        <p>React Hook</p>
+        <Link to={"/reactHook"}>
+           learn React Hook
+        </Link>
+
+        <p>------------------------------------</p>
+        <h1>Content For learn</h1>
+        
+        {this.props.children}
+
         <p>------------------------------------</p>
       </div>
     )
