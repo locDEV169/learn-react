@@ -1,3 +1,18 @@
+// lab2: cho danh sách  TodoList
+//1. render Todos với dữ liệu truyền từ component cha
+//2. khi click remove thì xóa item
+// phân tích:
+//App component sẽ có:
+// props: n/a
+// state: todoList
+// handler: handleTodoClick - remove todo ra khỏi todoList;
+// Render: <TodoList todos={todoList} onTodoClick={handleTodoClick} />
+//TodoClick sẽ có:
+//props: +/ todos: danh sách todos
+//       +/ onTodoList: function sẽ đc gọi khi 1 Todo đc click
+//state: n/a
+//render: ul > li > todo.title
+//handle todo onClick: gọi function props.onTodoClick()
 import React,{useState} from "react";
 
 function TodoList(){
